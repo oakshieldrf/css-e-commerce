@@ -1,0 +1,105 @@
+// Estilos para componente button
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.button {
+
+    width: auto;
+    padding: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+    border-radius: 3px;
+    transition-duration: 500ms;
+    font-weight: bold;
+
+    // Tipos
+    &--outlined {
+        background-color: none!important;
+        border-width: 2px;
+    }
+
+    &--primary {
+        background-color: v.$primary;
+        color: v.$white;
+        border: 3px solid v.$primary;
+
+        &:hover {
+            background-color: v.$white;
+            color: v.$primary;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out 0s;
+        }
+    }
+
+    &--danger {
+        background-color: v.$danger;
+        color: v.$white;
+        border: 3px solid v.$danger;
+    }
+
+    &--success {
+        background-color: v.$success;
+        color: v.$white;
+        border: 3px solid v.$success;
+    }
+
+    &--info {
+        background-color: v.$info;
+        color: v.$white;
+        border: 3px solid v.$info;
+    }
+
+    &--warning {
+        background-color: v.$warning;
+        color: v.$white;
+        border: 3px solid v.$warning;
+    }
+
+    &--dark {
+        background-color: v.$black;
+        color: v.$white;
+        border: 3px solid v.$black;
+
+        &:hover {
+            background-color: v.$white;
+            color: v.$black;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out 0s;
+        }
+    }
+
+    &--light {
+        background-color: v.$white;
+        color: v.$black;
+        border: 3px solid v.$white;
+
+        &:hover {
+            background-color: v.$black;
+            color: v.$white;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out 0s;
+        }
+    }
+
+// Tamaños
+    &--small {
+        width: 4rem;
+        padding: .6rem;
+        font-size: 1.1rem;
+    }
+
+    &--large {
+        width:100%;
+        padding: 1.5rem;
+        font-size: 1.8rem;
+    }
+}
+
+.bordered {
+    border: 2px solid v.$black!important;
+}
+
+.circle {
+    border-radius: 50%;
+}

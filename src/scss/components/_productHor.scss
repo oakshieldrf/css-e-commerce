@@ -1,0 +1,35 @@
+// Estilos para componente producto horizontal
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.producto-hor {
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding:2rem;
+
+        & h4 {margin:0}
+
+        & p {font-size:1.6rem}
+
+        &--buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap:2rem;
+            margin-top:2rem;
+        }
+    }
+}

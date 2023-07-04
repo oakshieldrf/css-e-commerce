@@ -1,0 +1,48 @@
+// Estilos para componente paginacion
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.pagination {
+
+
+    &__content {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        padding-top: .5em;
+    }
+
+    & a {
+        display: block;
+        padding: .5em 1em;
+        border: 1px solid v.$darkGray;
+        border-radius: .2em;
+        text-decoration: none;
+        color: v.$black;
+    }
+
+    & a[aria-current="page"] {
+        background-color: v.$black;
+        color: #fff;
+    }
+}
+        
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}

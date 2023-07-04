@@ -1,0 +1,30 @@
+// Estilos para Range slider
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.card {
+    width: auto;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    padding:1rem;
+  }
+
+  
+  .price-content {
+    @include m.flexLayout(row, space-between, center,0); 
+  }
+  
+  label {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  
+  .range-slider {
+    width: 100%;
+    position: relative;
+    margin: 15px 0 30px 0;
+  }
+  

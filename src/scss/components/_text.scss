@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.title--1 {
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    font-family: v.$main_font;
+    font-weight: 300;
+}
+
+.text-small {
+    font-size:1.3rem;
+}
+
+.text-medium {
+    font-size:1.5rem;
+
+}
+
+.text-large {
+    font-size:1.9rem;
+
+}
+
+.text-xs-large {
+    font-size:2.5rem;
+
+}
+
+.text-darkGray {
+    color:v.$darkGray;
+}
+
+.text-lightGray {
+    color:v.$lightGray;
+}
+
+.text-midGray {
+    color:v.$midGray;
+}
+
+
+.mega-text {
+    font-size: 10rem;
+    font-weight: 600;
+    color: v.$black;
+    margin:1rem;
+}

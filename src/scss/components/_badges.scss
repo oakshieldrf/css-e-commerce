@@ -1,0 +1,41 @@
+// Badges para productos
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+// Implementacion: Con tag "span"
+
+.badge {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 3px;
+    color: v.$white;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    &--oferta {
+        background-color: v.$danger ;
+
+    }
+    &--agotado {
+        background-color: v.$darkGray ;
+    }
+    &--cupon {
+        background-color: v.$success;
+    }
+    &--proximamente {
+        background-color: v.$warning;
+    }
+
+    & .small {
+
+    }
+
+    & .medium {
+
+    }
+
+    & .large {
+
+    }
+
+}

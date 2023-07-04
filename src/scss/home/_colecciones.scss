@@ -1,0 +1,54 @@
+
+// Estilos para seccion colecciones del index
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.colecciones {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 40vh;
+    column-gap: 3rem;
+
+     &--1:hover, &--2:hover, &--3:hover{
+        transform: scale(1.1);
+        cursor:pointer;
+    }
+
+    &--1{
+        position: relative;
+        @include m.backgroundImage('../img/colecciones-1.jpg');
+        transition: all 0.4s ease-in-out 0s;
+    }
+    &--2{
+        position: relative;
+        @include m.backgroundImage('../img/colecciones-2.jpg');
+        transition: all 0.4s ease-in-out 0s;
+    }
+    &--3{
+        position: relative;
+        @include m.backgroundImage('../img/colecciones-3.jpg');
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    &__texto {
+        position: absolute;
+        bottom:20%;
+        left:50%;
+        transform: translateX(-50%);
+        font-weight: 400;
+        font-family: v.$content-font;
+        background-color: v.$white;
+        padding:2rem;
+        text-align: center;
+
+
+        & h3 {
+            margin-bottom: 0;
+        }
+
+    }
+
+}
+

@@ -1,0 +1,19 @@
+// Estilos para seccion featured del index
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.featured {
+    margin: 5rem 0;
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+    }
+}

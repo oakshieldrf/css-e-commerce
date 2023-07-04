@@ -1,0 +1,43 @@
+@use 'variables' as v; 
+
+
+
+@mixin backgroundImage($src) {
+    height:100%;
+    background-image: url($src);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: v.$primary;
+}
+
+// Media queries
+@mixin phone {
+    @media(min-width: v.$phone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width: v.$tablet) {
+        @content;
+    }
+}
+
+
+// Displays flex
+
+@mixin flexLayout ($direction, $justify, $align, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+

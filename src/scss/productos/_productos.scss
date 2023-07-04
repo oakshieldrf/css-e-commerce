@@ -1,0 +1,62 @@
+// Estilos para pagina productos 
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.productos {
+    &-header {
+
+        margin-bottom: 3rem;
+
+        @include m.flexLayout(column, center, center,0);
+
+        @include m.tablet {
+            @include m.flexLayout(row, space-between, center,0);
+        }
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+
+    &-sidebar {
+
+        overflow: auto;
+        padding:.5rem;
+        border-right: 1px solid v.$lightGray;
+
+        & ul {
+            & li {
+                margin:.6rem 0;
+            }
+            & p {
+                margin: 0;
+                font-size: 1.6rem;
+            }
+        }
+
+        &__tamano {
+            ul {
+                @include m.flexLayout(row, flex-start, center,1rem); 
+                flex-wrap: wrap;
+            }
+        }
+
+        &__precio {
+
+        }
+
+        &__filtrar {
+            margin:4rem 0;
+            text-align: center;
+        }
+    }
+
+    &-lista {
+        @include m.flexLayout(column, center, center,0);
+        @include m.tablet {
+            @include m.flexLayout(row, space-around, center,3rem);
+            flex-wrap: wrap;
+        }
+    }
+}

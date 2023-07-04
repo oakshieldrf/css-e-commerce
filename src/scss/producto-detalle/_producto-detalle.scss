@@ -1,0 +1,71 @@
+// Estilos para pagina "Producto detalle"
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.producto {
+    height: 100%;
+    width:auto;
+    padding: 1rem;
+
+    @include m.flexLayout(column, center, center, 3rem);
+
+    @include m.tablet{
+        display: grid;
+        grid-template-columns: 15% 42.5% 42.5%;
+        height: 600px;
+        padding: 3rem;
+
+    }
+
+    &__thumbnails {
+        overflow: scroll;
+        height:inherit;
+        @include m.flexLayout(row, flex-start, center, 3rem);
+        // flex-wrap: wrap;
+        @include m.tablet {
+            @include m.flexLayout(column, center, center, 1rem);
+            flex-wrap: no-wrap;
+        }
+        & img {
+            width: 25%;
+            height:auto;
+            @include m.tablet {
+                width: 80%;
+                height:auto;
+            }
+        }
+    }
+    &__image {
+        height:inherit;
+        @include m.flexLayout(column, flex-start, center, 3rem);
+
+        &--main {
+            width: auto;
+            height: auto;
+        }
+
+    }
+    &__info {
+        height:inherit;
+
+        &--buttons {
+            @include m.flexLayout(row, space-between, center, 0rem);
+            @include m.tablet {
+                @include m.flexLayout(row, flex-start, center, 3rem);
+            }
+            input{
+                width:6rem;
+            }
+        }
+
+        &--price {
+            @include m.flexLayout(row, space-around, center, 0rem);
+            @include m.tablet {
+                @include m.flexLayout(column, flex-start, flex-start, 0rem);
+            }
+        }
+
+
+    }
+}

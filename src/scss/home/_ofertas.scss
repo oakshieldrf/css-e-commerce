@@ -1,0 +1,57 @@
+// Estilos para seccion de ofertas de index
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.ofertas {
+    display:flex;
+    flex-direction: column;
+    height:85vh;
+    margin: 6rem 0;
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        column-gap: 3rem;
+    }
+
+    &__container {
+
+        &--1 {
+            @include m.backgroundImage("../img/ofertas-modelos.webp");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            @include m.tablet {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+
+        }
+
+        &--2 {
+          background-color: v.$primary;  
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin:3rem;
+        height:100%;
+        text-align: center;
+
+        & h1 {
+            margin-bottom: 1rem;
+            font-size: 5rem;
+            font-weight: 200;
+        }
+    }
+
+
+}

@@ -1,0 +1,101 @@
+// Estilos para pagina categorias
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+// HERO
+.hero-1 {
+    max-width:100%;
+    min-height: 50vh;
+    @include m.backgroundImage('../img/categorias-hero-2.webp');
+    @include m.flexLayout(column,center,center,0);
+
+
+    &__content {
+        text-align: center;
+        & h2 {
+            margin-bottom: 0;
+            font-weight: 200;
+            row-gap: no-gap;
+        }
+
+        & p {
+            color: v.$darkGray;
+            font-size: 1.5rem;
+            & span {
+                color: v.$black;
+            }
+        }
+
+
+    }
+}
+
+// HOMBRE Y MUJER
+.seccion-row {
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+// LO MAS NUEVO
+.lo-mas-nuevo {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 8rem 0;
+
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns:  repeat(2, 1fr);
+    }
+
+    &--col-1 {
+        max-width:100%;
+        @include m.backgroundImage('../img/seccion-lo-nuevo.webp');
+        @include m.flexLayout(row,flex-start,flex-end,0);
+
+    }
+    &--col-2 {
+        height: 100%;
+        overflow: scroll;
+    }
+}
+
+// CAMISAS
+
+// CALZADO
+
+.calzado {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    margin: 8rem 0;
+
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns:  repeat(2, 1fr);
+    }
+
+    &--col-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
+
+    &--col-2 {
+        padding: 2rem;
+        @include m.backgroundImage('../img/seccion-calzado.webp');
+        @include m.flexLayout(row,flex-start,center,0);
+
+    }
+
+}
